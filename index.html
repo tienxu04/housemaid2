@@ -63,13 +63,18 @@
 
 <script>
 (function(){
-  const COUNT = 63;
+  const COUNT = 76;
   const label = i => {
     if (i===1) return 'Prologue';
-    if (i===63) return 'Epilogue';
+    if (i===76) return 'Epilogue';
     return 'Chapter ' + (i-1);
   };
-  const fname = i => `The_Housemaid_${i}.mp3`;
+  
+  //const fname = i => `The_Housemaid_${i}.mp3`;
+  //05 - The Housemaid's Secret.mp3
+  const fname = i => `${String(i).padStart(2, '0')} - The Housemaid's Secret.mp3`;
+
+//  const fname = i => `${i} - The Housemaid's Secret.mp3`;
 
   const audio = document.getElementById('audio');
   const now = document.getElementById('now');
@@ -104,3 +109,4 @@
 </script>
 </body>
 </html>
+
